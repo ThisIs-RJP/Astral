@@ -65,9 +65,9 @@ body {
     color: white;
 }
 
-.library::-webkit-scrollbar {
+/* .library::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .library {
     border-top: 2px solid rgba(128, 0, 128, 0.521);
@@ -78,13 +78,14 @@ body {
     text-align: left;
     /* Removing Scroll Bar */
     overflow-x: hidden;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    overflow-y: auto;
+    /* -ms-overflow-style: none;  
+    scrollbar-width: none; */
 }
 
 .playlists {
     color: white;
-    font-size: 2vw;
+    font-size: 1.4vw;
     /* background-color: red; */
     /* background-color: red; */
     margin: 3%;
@@ -105,11 +106,19 @@ body {
     border-radius: 10%;
 }
 
+.detailCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -4%;
+    width: 100%;
+}
 .playlistDetail {
     margin-left: 5%;
     /* display: flex; */
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
 }
 
 .playlistDetail section {
@@ -139,6 +148,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
+    vertical-align: middle;
     position: fixed;
     width: 85vw;
     height: 10vh;
@@ -148,21 +158,21 @@ body {
 .navbarContents {
     margin-top: 0vh;
     display: flex;
+    height: 100%;
+    width: 100%;
     justify-content: right;
     align-items: center;
     padding-right: 10vw;
 }
 
-.btn {
+/* .btn {
     background-color: rgb(23, 23, 23);
     height: 7vh;
     width: 10vw;
     border: none;
     color: white;
-    /* padding: 16px 32px; */
     text-align: center;
     font-size: 1.4vw;
-    /* margin: 4px 2px; */
     transition: 0.3s;
     font-weight: bolder;
     border-radius: 1vw;
@@ -171,13 +181,94 @@ body {
 .btn:hover {
     background-color: purple;
     color: white;
+    transition: 0.3s
+}
+
+.btn:hover span {
+    display: none;
+} */
+
+.buttonContainer {
+    width: 8vw;
+    height: 8vh;
+    background-color: rgb(23, 23, 23);
+    transition: 0.3s;
+    margin-right: 1vw;
+    border-radius: 1vw;
+}
+
+.upgrade {
+    width: 100%;
+    height: 100%;
+    font-size: 1.3vw;
+    position: absolute;
+    color: white;
+    margin-left: 1.7vw;
+    margin-top: 1.3vh;
+}
+
+.upgrade div {
+    position: absolute;
+}
+
+.afterUpgrade {
+    opacity: 0;
+}
+
+.beforeUpgrade, .afterUpgrade {
+    transition: opacity 0.1s linear;
+}
+
+.buttonContainer:hover {
+    background-color: purple;
+}
+
+.buttonContainer:hover .beforeUpgrade {
+    opacity: 0;
+}
+
+.buttonContainer:hover .afterUpgrade {
+    opacity: 1;
+}
+
+.wrap {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    font-size: 40px;
+    color: white
+}
+
+.wrap div {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    font-size: 40px;
+    color: white
+}
+
+.new {
+    opacity: 0;
+}
+
+.old, .new {
+    transition: opacity 0.1s linear;
+}
+
+.wrap:hover .old {
+    opacity: 0;
+}
+
+.wrap:hover .new {
+    opacity: 1;
 }
 
 #userIcon {
+    margin-right: 15vw;
     margin-left: 5vw;
     width: 2vw;
     height: 5vh;
-    margin-top: 1.5vh;
+    margin-top: 0vh;
 }
 
 .middleDiv::-webkit-scrollbar {

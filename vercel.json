@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "astral/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "astral/wsgi.py"
+      }
+    ]
+}
