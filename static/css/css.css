@@ -10,6 +10,20 @@ h1 {
     color: white;
 }
 
+.libraryBlock {
+    background-color: rgb(16, 16, 16);
+    /* background-color: red;  */
+    /* For testing */
+    width: 20vw;
+    height: 100vh;
+}
+
+.otherBlock {
+    width: 80vw;
+    height: 100vh;
+    background-color: black;    
+}
+
 .navbar {
     background-color: rgb(28, 28, 28);
     font-size: 200%;
@@ -18,7 +32,8 @@ h1 {
     top: 0;
 
     position: fixed;
-    width: 100%;
+    width: 80vw;
+    height: 10vh;
 }
 
 .navbarContents {
@@ -51,6 +66,20 @@ h1 {
 }
 
 .middleDiv {
+    background-color: red;
+    width: 60vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.lastBox {
+    background-color: green;
+    width: 20vw;
+    height: 100vh;
+}
+/* .middleDiv {
     background-color: #fed9ff;
     width: 600px;
     height: 150px;
@@ -58,4 +87,5 @@ h1 {
     overflow-y: auto;
     text-align: center;
     padding: 20px;
-}
+    display: inline-block;
+} */
