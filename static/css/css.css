@@ -269,6 +269,66 @@ body {
     scrollbar-width: none;  /* Firefox */
 }
 
+
+.introBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+    /* background-color: red; */
+    background-color: rgb(158, 157, 157);
+    width: 55vw;
+    border-radius: 1vw;
+    height: 50vh;
+}
+
+.introPic {
+    margin-top: 3vh;
+    width: 33vw;
+    border-radius: 1vw;
+}
+
+.introContainer {
+    display: flex;
+}
+
+.introText {
+    width: 21vw;
+    margin-top: 1vw;
+    margin-left: 5vw;
+    margin-right: 0vw;
+    /* background-color: blue; */
+    text-align: left;
+    font-size: 1vw;
+    align-items: center;
+}
+
+.introText h1 {
+    color: black;
+}
+
+.introText p1 {
+    color: rgb(66, 66, 66)
+}
+
+.introDescBox {
+    /* background-color: blue; */
+    font-size: 120%;
+    width: 80%;
+    height: 45%;
+}
+
+
+/* ####################### Suggestions  */
+
+.trackBox {
+    background-color: blue;
+    width: 55vw;
+    height: 50vh;
+    margin-top: 10vh;
+    color: white;
+    font-weight: 400;
+}
+
 /* ####################### MIDDLE BOX */
 
 .lastBox {
