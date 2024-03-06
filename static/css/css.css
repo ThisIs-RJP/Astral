@@ -23,7 +23,7 @@ body {
     /* background-color: red;  */
     /* For testing */
     width: 20vw;
-    border-right: 1px solid rgba(128, 0, 128, 0.521);
+    /* border-right: 1px solid rgba(128, 0, 128, 0.521); */
     height: 100vh;
 }
 
@@ -65,9 +65,20 @@ body {
     color: white;
 }
 
-/* .library::-webkit-scrollbar {
-    display: none;
-} */
+.library::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+.library::-webkit-scrollbar-track {
+    /* display: none; */
+    background-color: rgb(26, 26, 26);
+}
+
+.library::-webkit-scrollbar-thumb {
+    /* display: none; */
+    background-color: rgb(35, 35, 35)
+}
+
 
 .library {
     border-top: 2px solid rgba(128, 0, 128, 0.521);
@@ -113,6 +124,7 @@ body {
     margin-top: -4%;
     width: 100%;
 }
+
 .playlistDetail {
     margin-left: 5%;
     /* display: flex; */
@@ -122,21 +134,38 @@ body {
 }
 
 .playlistDetail section {
-    margin-top: 0%;
+    margin-top: -30%;
     font-weight: 100;
     line-height: 80%;
     font-size: 70%;
 }
-/* 
-.middleDiv {
-    background-color: rgb(27, 27, 27);
-    width: 65vw;
-    height: 100vh;
-    overflow-x: hidden;
-    text-align: center;
-    -ms-overflow-style: none;
-    scrollbar-width: none;  
-} */
+
+.artistAndPlaylist {
+    width: 10vw;
+    
+}
+
+.playlistName {
+    font-size: 90%;
+}
+
+.artistName {
+    opacity: 0;
+    font-size: 90%;
+    margin-top: -20%;
+}
+
+.playlistName, .artistName {
+    transition: opacity 0.1s linear;
+}
+
+.playlists:hover .playlistName {
+    opacity: 0;
+}
+
+.playlists:hover .artistName {
+    opacity: 1;
+}
 
 /* ######################################### 1st Box Dividers */
 
@@ -152,7 +181,7 @@ body {
     position: fixed;
     width: 85vw;
     height: 10vh;
-    border-bottom: 1px solid rgba(128, 0, 128, 0.521);
+    /* border-bottom: 1px solid rgba(128, 0, 128, 0.521); */
 }
 
 .navbarContents {
@@ -164,29 +193,6 @@ body {
     align-items: center;
     padding-right: 10vw;
 }
-
-/* .btn {
-    background-color: rgb(23, 23, 23);
-    height: 7vh;
-    width: 10vw;
-    border: none;
-    color: white;
-    text-align: center;
-    font-size: 1.4vw;
-    transition: 0.3s;
-    font-weight: bolder;
-    border-radius: 1vw;
-}
-
-.btn:hover {
-    background-color: purple;
-    color: white;
-    transition: 0.3s
-}
-
-.btn:hover span {
-    display: none;
-} */
 
 .buttonContainer {
     width: 8vw;
@@ -231,38 +237,6 @@ body {
     opacity: 1;
 }
 
-.wrap {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    font-size: 40px;
-    color: white
-}
-
-.wrap div {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    font-size: 40px;
-    color: white
-}
-
-.new {
-    opacity: 0;
-}
-
-.old, .new {
-    transition: opacity 0.1s linear;
-}
-
-.wrap:hover .old {
-    opacity: 0;
-}
-
-.wrap:hover .new {
-    opacity: 1;
-}
-
 #userIcon {
     margin-right: 15vw;
     margin-left: 5vw;
@@ -295,15 +269,3 @@ body {
     width: 20vw;
     height: 100vh;
 }
-/* ######################################### 2nd Box Contents */
-
-/* .middleDiv {
-    background-color: #fed9ff;
-    width: 600px;
-    height: 150px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-align: center;
-    padding: 20px;
-    display: inline-block;
-} */
