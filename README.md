@@ -5,4 +5,4 @@
 ## **Change Log**
 
 #### **March 6th**
-+ Started Development for Project Astral_
++ _Started Development for Project Astral_
