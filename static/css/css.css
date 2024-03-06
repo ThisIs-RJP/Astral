@@ -79,7 +79,7 @@ body {
     background-color: rgb(35, 35, 35)
 }
 
-
+/* ########################################################## LIBRARY BOX */
 .library {
     border-top: 2px solid rgba(128, 0, 128, 0.521);
     width: 100%;
@@ -166,10 +166,13 @@ body {
 .playlists:hover .artistName {
     opacity: 1;
 }
+/* ########################################################## LIBRARY BOX */
 
 /* ######################################### 1st Box Dividers */
 
 /* ######################################### 2nd Box Contents */
+
+/* ####################### Navbar */
 .navbar {
     /* background-color: rgb(28, 28, 28); */
     background-color: rgb(23, 23, 23);
@@ -244,6 +247,9 @@ body {
     height: 5vh;
     margin-top: 0vh;
 }
+/* ####################### Navbar */
+
+/* ####################### MIDDLE BOX */
 
 .middleDiv::-webkit-scrollbar {
     display: none;
@@ -262,6 +268,8 @@ body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+/* ####################### MIDDLE BOX */
 
 .lastBox {
     background-color: rgb(24, 24, 24);
