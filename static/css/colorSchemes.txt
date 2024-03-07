@@ -1,0 +1,12 @@
+## Intro box color
+rgb(158, 157, 157);
+
+## Button Fill Color
+rgb(59, 59, 205);
+
+
+## Testing Colors
+red
+blue
+green
+yellow
