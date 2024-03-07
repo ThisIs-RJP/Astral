@@ -1,6 +1,6 @@
 /* ######################################### DEFAULT SETTINGS  */
 html {
-    background-color: black;
+    background-color: rgb(158, 157, 157);
     font-family: "Kanit", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -26,15 +26,14 @@ body {
     width: 20vw;
     /* margin-top: -3vh; */
     /* border-right: 1px solid rgb(59, 59, 205); */
-    height: 100vh;
+    height: 99.99vh;
 }
 
 .otherBlock {
     width: 80vw;
     height: 100vh;
-    background-color: black;    
+    background-color: rgb(24, 24, 24);
 }
-
 /* ######################################### Box Dividers  */
 
 /* ######################################### 1st Box Dividers */
@@ -264,7 +263,7 @@ body {
 }
 
 .middleDiv {
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(30, 30, 30);
     /* background-color: red; */
     width: 65vw;
     height: 100vh;
@@ -417,7 +416,7 @@ body {
 }
 
 .track {
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(45, 45, 45);
     /* background-color: red; */
     width: 20%;
     height: 100% + 2vh;
@@ -430,7 +429,7 @@ body {
 }
 
 .track:hover {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(65, 65, 65);
 }
 
 .track img {
@@ -453,11 +452,12 @@ body {
 /* #####s################## MIDDLE BOX */
 
 .lastBox {
-    /* background-color: rgb(24, 24, 24); */
-    margin-top: 10vh;
-    background-color: green;
+    background-color: rgb(24, 24, 24);
+    margin-top: 8vh;
+    /* margin-top: 20vh; */
+    /* background-color: green; */
     width: 20vw;
-    height: 90vh;
+    height: 92vh;
 }
 
 .nowPlaying {
@@ -465,29 +465,228 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 60%;
-    background-color: red;
-    text-align: center;
+    height: 70%;
+    /* background-color: red; */
+    text-align: left;
+}
+
+
+#madeBy {
+    margin-top: -5%;
+    font-size: 1.2vw;
+    font-weight: 300;
+    color: rgb(194, 194, 194);
+    text-align: right;
+}
+.nowPlaying h1 {
+    font-size: 1.4vw;
 }
 
 .playBox {
-    height: 70%;
-    background-color: blue;
-    padding: 3vw;
-    border-radius: 3vw;
+    height: 90%;
+    /* background-color: blue; */
+    background-color: rgb(35, 35, 35);
+    padding: 1vw;
+    border-radius: 1vw;
 }
 #nowPlaying {
     font-size: 1.5vw;
     font-weight: 400;
+    color: white;
 }
 
 .nowPlaying img {
     margin-top: 5%;
-    width: 10vw;
+    width: 15vw;
+    border-radius: 1vw
 }
 
 .buttonBar {
     width: 100%;
     height: 20%;
-    background-color: brown;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
 }
+
+.pauseSkip {
+    width: 3vw;
+    height: 3vw;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    position: absolute
+}
+
+.previousButton {
+    width: 3vw;
+    height: 3vw;
+    /* background-color: purple; */
+}
+
+.skipButton {
+    width: 3vw;
+    height: 3vw;
+    /* background-color: purple; */
+}
+
+.toGo {
+    margin-top: 13%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* #toGo {
+    opacity: 1;
+} */
+
+.toGo div {
+    height: 60%;
+    width: 20%;
+    border-radius: 30%;
+    margin: 4%;
+    background-color: rgb(194, 194, 194);
+}
+
+.toPause {
+    opacity: 0;
+    margin:auto;
+    width: 0;
+    height: 0;
+    margin-left: -2.4vw;
+    border-bottom: 1.7vw solid rgb(59, 59, 205);
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    transform: rotate(90deg);
+}
+
+.toGo, .toPause {
+    transition: opacity 0.05s linear;
+}
+
+.pauseSkip:hover .toGo {
+    opacity: 0;
+}
+
+.pauseSkip:hover .toPause {
+    opacity: 1;
+}
+
+.pauseSkip:hover {
+    opacity: 1;
+}
+
+.skipButton {
+    margin-right: 1.5vw;
+    width: 3vw;
+    height: 3vw;
+    /* background-color: purple; */
+    display: flex;
+    justify-content: center;
+}
+
+.skipButton:hover .triangleTriangle {
+
+    border-bottom: 1vw solid rgb(59, 59, 205);
+    border-left: 0.7vw solid transparent;
+    border-right: 0.7vw solid transparent;
+}
+
+.skipButton:hover .lineLine {
+    background-color: rgb(59, 59, 205);
+}
+
+.previousButton {
+    margin-left: 1.5vw;
+    width: 3vw;
+    height: 3vw;
+    /* background-color: purple; */
+    display: flex;
+    justify-content: center;
+}
+
+.previousButton:hover .triangleTriangle {
+
+    border-bottom: 1vw solid rgb(59, 59, 205);
+    border-left: 0.7vw solid transparent;
+    border-right: 0.7vw solid transparent;
+}
+
+.previousButton:hover .lineLine {
+    background-color: rgb(59, 59, 205);
+}
+
+.lineLine {
+    height: 40%;
+    width: 10%;
+    border-radius: 30%;
+    background-color: rgb(194, 194, 194);
+    margin-top: 30%;
+    transition: 0.2s;
+    /* margin-left: -2vw; */
+}
+
+.triangleTriangle {
+    /* margin-left: -2.4vw; */
+    transition: 0.2s;
+    border-bottom: 1vw solid rgb(194, 194, 194);
+    border-left: 0.7vw solid transparent;
+    border-right: 0.7vw solid transparent;
+    transform: rotate(90deg);
+    margin-left: 10%;
+    margin-right: -40%;
+}
+
+.artistDetails {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+    /* background-color: red; */
+}
+
+.artist {
+    width: 80%;
+    height: 100%;
+    /* background-color: blue; */
+    background-color: rgb(35, 35, 35);
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+    border-radius: 1vw;
+    padding-bottom: 5%;
+}
+
+.artist section {
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-bottom: -5%;
+}
+
+.artist p1 {
+    color: rgb(204, 204, 204);
+    font-weight: 400;
+}
+
+.artist p1:hover {
+    text-decoration: underline;
+}
+.artist p2 {
+    font-weight: 200;
+    font-size: 90%;
+}
+/* .introDescBoxBefore {
+.introDescBoxBefore, .introDescBoxAfter {
+    transition: opacity 0.1s linear;
+}
+
+.introWrapper:hover .introDescBoxBefore {
+    opacity: 0;
+}
+
+.introWrapper:hover .introDescBoxAfter{
+    opacity: 1;
+} */

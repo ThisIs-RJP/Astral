@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <!-- ############## Font Choice from Google ########################## -->
+<title>Astral</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -10,7 +11,11 @@
 
 <html>
     <head>
+        <!-- ############ CSS FILE -->
         <link rel="stylesheet" href="static/css/css.css">
+
+        <!-- JAVASCRIPT FILE -->
+        <script src="static/js/js.js"></script>
     </head>
 
     <body>
@@ -147,7 +152,8 @@
                 <!-- ------------------------ This is the navigation bar -->
                 <div class="navbar">
                     <div class="navbarContents">
-                        <a href="order">
+                        
+                        <a href="signup">
                             <div class="buttonContainer">
                                 <div class="upgrade">
                                     <div class="afterUpgrade">Ethereal</div>
@@ -155,7 +161,10 @@
                                 </div>
                             </div>
                         </a>
-                        <img src="static/images/userIconAstral.png" id="userIcon" />
+
+                        <a href="signup">
+                            <img src="static/images/icon.png" id="userIcon" />
+                        </a>
                     </div>
                 </div>
                 <!-- ------------------------ This is the navigation bar -->
@@ -169,7 +178,7 @@
                                 <div class="introContainer">
                                     <div class="introText">
                                         <h1>
-                                            JPOP Hitssss <br><p1>ft. YOASOBI</p1>
+                                            JPOP Hits <br><p1>ft. YOASOBI</p1>
                                         </h1>
 
                                         <div class="introWrapper">
@@ -341,6 +350,12 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                     </div>
                     <!-- ############### THIS IS THE MIDDLE BOX -->
 
@@ -348,15 +363,63 @@
                         <div class="nowPlaying">
                             <div class="playBox">
                                 <div id="nowPlaying">
-                                    Now Playing
+                                    <h1>
+                                        アイドル
+                                    </h1>
+                                </div>
+
+                                <div id="madeBy">
+                                    YOASOBI
                                 </div>
                                 <div>
-                                    <img src="static/images/Ayase.jpg" />
+                                    <img src="static/images/songs/idol.png" />
                                 </div>
 
                                 <div class="buttonBar">
-                                    
+                                    <div class="skipButton">
+                                        <div class="lineLine">
+                                        </div>
+                                        <div class="triangleTriangle" style="margin-left: -40%; margin-right: 10%; transform: rotate(-90deg);">
+                                        </div>
+                                    </div>
+
+                                        <div class="pauseSkip" id="pauseButton" role="button">
+                                            <div class="toGo" id="toGo">
+                                                <div>
+                                                </div>
+                                                <div>
+                                                </div>
+                                            </div>
+                                            <div class="toPause" id="toPause">
+                                            </div>
+                                        </div>
+
+                                    <div class="previousButton">
+                                        <div class="triangleTriangle">
+                                        </div>
+                                        <div class="lineLine">
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <div class="buttonBar">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artistDetails">
+                            <div class="artist">
+                                <section>
+                                    Credits
+                                </section>
+                                <br>
+                                <p1>
+                                    YOASOBI
+                                </p1>
+                                <br>
+                                <p2>
+                                    Main Artist
+                                </p2>
                             </div>
                         </div>
                     </div>

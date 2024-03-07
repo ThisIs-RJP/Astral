@@ -1,6 +1,12 @@
 ## Intro box color
 rgb(158, 157, 157);
 
+## Playlist hover color
+rgb(35, 35, 35);
+
+## Button Colors
+rgb(194, 194, 194);
+
 ## Button Fill Color
 rgb(59, 59, 205);
 
