@@ -321,7 +321,7 @@ body {
 /* ####################### Suggestions  */
 
 .trackBox {
-    background-color: blue;
+    /* background-color: blue; */
     width: 55vw;
     height: 50vh;
     margin-top: 10vh;
@@ -329,7 +329,43 @@ body {
     font-weight: 400;
 }
 
-/* ####################### MIDDLE BOX */
+.allTracks {
+    display: flex;
+    justify-content: center;
+}
+
+.track {
+    background-color: rgb(35, 35, 35);
+    width: 20%;
+    height: 40vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    padding: 2%;
+    text-align: left;
+    border-radius: 1vw;
+    transition: 0.5s;
+}
+
+.track:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+.track img {
+    width: 100%;
+    border-radius: 1vw;
+}
+
+.taskDescription h1 {
+    font-weight: 400;
+    font-size: 1.3vw;
+}
+
+.taskDescription div {
+    margin-top: -1vw;
+    font-size: 1vw;
+    color: rgb(161, 161, 161);
+}
+/* #####s################## MIDDLE BOX */
 
 .lastBox {
     background-color: rgb(24, 24, 24);
