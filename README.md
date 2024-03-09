@@ -4,6 +4,9 @@
 
 ## **Change Log**
 
+### **March 8th**
++ _Changed color scheme of Astral from dark purple to neon blue_
++ 
 #### **March 7th**
 + _Home page is 90% finished_
 + _Created the containers (narbar, library box, page box and "now playing box"_
