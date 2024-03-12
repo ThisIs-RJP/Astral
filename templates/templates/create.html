@@ -18,20 +18,33 @@
         <script src="static/js/js.js"></script>
     </head>
 
+    
     <body>
+        <div class="logoPlacer">
+            <img src="static/images/logo.png" id="logo"/>
+        </div>
+
         <div class="page">
-            <div>
+            <div class="insidePage">
                 <div style="display: flex; justify-content: center;">
-                    <h1>
-                        Astral
-                    </h1>
+
                 </div>
                 <div style="display: flex; justify-content: center; font-size: 80%;">
-                    <h1>
-                        Signup
-                    </h1>
+                    <p1>
+                        Create an account 
+                    </p1>
                 </div>
+                <form method="POST" action="{% url 'signup' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form }}
+                    <div style="display: flex;justify-content: center; width: 100%">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
+
+
+
     </body>
 </html>

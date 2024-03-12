@@ -8,8 +8,8 @@ html {
 
 body {
     margin: 0;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -17,13 +17,71 @@ body {
     padding: 10px;
 }
 
-.page {
+/* .page {
     display: flex;
     justify-content: center;
     background-color: rgb(35, 35, 35);
-    width: 30vw;
-    height: 30vw;
-    color: rgb(59, 59, 205);
-    border-radius: 2vw;
-    border: 0.2vw solid rgb(59, 59, 205);
+    color: white;
+
+} */
+
+.logoPlacer {
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    padding-bottom: 8vh;
+    /* padding-top: 8vh; */
 }
+#logo {
+    width: 15vw;
+}
+
+.page {
+    background-color: rgb(35, 35, 35);
+    /* background: gray; */
+    width: 28vw;
+    height: 28vw;
+    position: relative;
+}
+
+.page p1 {
+    font-size: 2vw;
+}
+
+.insidePage {
+    color: white;
+    /* background-color: orange; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+}
+
+form input {
+    width: 100%;
+    padding: 0.5vw 0.5vh;
+    margin: 0.5vw 0;
+    box-sizing: border-box;
+    border: 1px solid rgb(180, 180, 180);
+    background-color: rgb(35, 35, 35);
+    color: white;
+    font-size: 100%;
+    border-radius: 0.5vw;
+}
+
+.page button {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: none;
+    width: 100%;
+    font-size: 1vw;
+    margin-top: 4vh;
+    height: 5vh;
+    transition: 0.2s;
+}
+
+.page button:hover {
+    background-color: rgb(59, 59, 205);
+}
+
