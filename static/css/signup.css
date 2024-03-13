@@ -25,6 +25,10 @@ body {
 
 } */
 
+a {
+    text-decoration: none;
+    color: white;
+}
 .logoPlacer {
     display: flex;
     justify-content: center;
@@ -67,7 +71,7 @@ form input {
     border: 1px solid rgb(180, 180, 180);
     background-color: rgb(35, 35, 35);
     color: white;
-    font-size: 100%;
+    font-size: 70%;
     border-radius: 0.5vw;
 }
 
@@ -86,3 +90,45 @@ form input {
     background-color: rgb(59, 59, 205);
 }
 
+.buttonContainer {
+    width: 100%;
+    height: 8vh;
+    /* background-color: rgb(23, 23, 23); */
+    transition: 0.3s;
+    border-radius: 1vw;
+}
+
+.container {
+    width: 100%;
+    height: 10%;
+    font-size: 1.3vw;
+    position: absolute;
+    color: white;
+}
+
+.container div {
+    position: absolute;
+}
+
+.beforeHover {
+    width: 100%;
+    text-align: center;
+}
+
+.afterHover {
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+}
+
+.beforeHover, .afterHover {
+    transition: opacity 0.1s linear;
+}
+
+.buttonContainer:hover .beforeHover {
+    opacity: 0;
+}
+
+.buttonContainer:hover .afterHover {
+    opacity: 1;
+}

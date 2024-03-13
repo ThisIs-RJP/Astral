@@ -17,7 +17,7 @@ def signup(request):
     else:
         form = UserForm()
         return render(request, 'create.html', {'form': form})
-    return render(request, 'create.html', {'form': form})
+    return render(request, 'create.html', {'form': form}) 
     
 class UserLoginView(LoginView):
     template_name='login.html'
