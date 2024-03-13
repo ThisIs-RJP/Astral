@@ -123,3 +123,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = ["static"] ## For my CSS, Image files
+LOGIN_REDIRECT_URL = "/"

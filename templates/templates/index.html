@@ -152,8 +152,10 @@
                 <!-- ------------------------ This is the navigation bar -->
                 <div class="navbar">
                     <div class="navbarContents">
+                        {% if user.is_authenticated %}
                         
                         <a href="signup">
+                            <!-- <li style="color: white; font-size: 120%"><i>Logged in as {{ user.username }}</i></li> -->
                             <div class="buttonContainer">
                                 <div class="upgrade">
                                     <div class="afterUpgrade">Ethereal</div>
@@ -162,9 +164,24 @@
                             </div>
                         </a>
 
+                        <a href="logout" title="logout">
+                            <img src="static/images/pfp.png" id="userIcon2" />
+                        </a>
+                        {% else %}
+                        <a href="signup">
+                            <div class="buttonContainer">
+                                <div class="upgrade">
+                                    <div class="afterUpgrade">Ethereal</div>
+                                    <div class="beforeUpgrade">Upgrade!</div>
+                                </div>
+                            </div>
+                        </a>
+
                         <a href="signup">
                             <img src="static/images/icon.png" id="userIcon" />
                         </a>
+                        {% endif %}
+
                     </div>
                 </div>
                 <!-- ------------------------ This is the navigation bar -->

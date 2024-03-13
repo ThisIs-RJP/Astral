@@ -10,7 +10,6 @@ rgb(194, 194, 194);
 ## Button Fill Color
 rgb(59, 59, 205);
 
-
 ## Testing Colors
 red
 blue

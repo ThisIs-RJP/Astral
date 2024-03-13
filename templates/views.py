@@ -1,6 +1,8 @@
 from django.shortcuts import *
 from django.http import HttpResponse
 from templates.forms import *
+from django.contrib.auth.views import LoginView
+from django.contrib.auth import *
 
 # Create your views here.
 def index(request):
@@ -15,3 +17,11 @@ def signup(request):
     else:
         form = UserForm()
         return render(request, 'create.html', {'form': form})
+    return render(request, 'create.html', {'form': form})
+    
+class UserLoginView(LoginView):
+    template_name='login.html'
+
+def log_out(request):
+    logout(request)
+    return redirect("/")
