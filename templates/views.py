@@ -25,3 +25,6 @@ class UserLoginView(LoginView):
 def log_out(request):
     logout(request)
     return redirect("/")
+
+def account(request):
+    return render(request, 'account.html')
