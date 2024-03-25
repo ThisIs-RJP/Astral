@@ -12,6 +12,11 @@ html, body {
     
 }
 
+.centerThis {
+    display: flex;
+    justify-content: center;
+}
+
 #mainContainer {
     width: 100vw;
     height: 100vh;
@@ -29,4 +34,15 @@ html, body {
     height: 100%;
     width: 75%;
     background-color: aqua;
+}
+
+.userDetails {
+    padding-top: 5vh;
+    width: 100%;
+    background-color: coral;
+    height: 40%;
+}
+.userIcon {
+    width: 10vw;
+    height: 10vw;
 }
