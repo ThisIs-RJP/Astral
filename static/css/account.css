@@ -1,0 +1,32 @@
+/* ######################################### DEFAULT SETTINGS  */
+html, body {
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    /* background-color: rgb(23, 23, 23); */
+    background-color: red;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    
+}
+
+#mainContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+}
+
+#buttonsBox {
+    height: 100%;
+    width: 25%;
+    background-color: yellow;
+}
+
+#mainContentsBox {
+    height: 100%;
+    width: 75%;
+    background-color: aqua;
+}

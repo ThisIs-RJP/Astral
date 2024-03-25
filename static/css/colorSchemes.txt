@@ -15,3 +15,6 @@ red
 blue
 green
 yellow
+
+## Dark background color
+(23, 23, 23);
