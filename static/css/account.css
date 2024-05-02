@@ -62,3 +62,26 @@ html, body {
     width: 75%;
     background-color: aqua;
 }
+
+#profileContentTitle {
+    height: 10%;
+    width: 100%;
+    background-color: brown;
+}
+
+#profileContentTitle section {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin-right: 5px;
+    background-color: blueviolet;
+    font-size: 200%;
+    overflow: auto;
+}
+
+#profileContentTitle section span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
