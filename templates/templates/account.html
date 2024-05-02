@@ -72,9 +72,18 @@
                                 {{ k }}
                             </p1>
                             <br>
-                            <p2>
-                                {{ v }}
+                            <p2 class="profileTextDescription">
+                                {{ v.0 }}
                             </p2>
+                            
+                            <div>
+                                <!-- <p1>
+                                    {{ v.1 }}
+                                </p1> -->
+
+                                <input value={{ v.1 }} class="smallContentBox">
+
+                            </div>
 
                             <div id="spacingSpacing" style="margin-top: 2vw"></div>
                         {% endfor %}

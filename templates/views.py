@@ -28,10 +28,33 @@ def log_out(request):
     return redirect("/")
 
 def account(request):
+    user = request.user
+
+    returnDictionary = {}
+    userInformation = []
+    tempList = []
+    i = 0
+
+    userInformation.append(user)
+    userInformation.append(user.email)
+
+    # print("User information")
+    # print(userInformation)
+    # print()
+
+    for k, v in PROFILE_SETTINGS.items():
+        tempList.append(v)
+        tempList.append(userInformation[i])
+        returnDictionary[k] = tempList
+        i = i + 1
+        tempList = []
+
+    print(returnDictionary)
+
     return render(
         request,
         'account.html',
         {
-            "content" : PROFILE_SETTINGS
+            "content" : returnDictionary
         }
         )

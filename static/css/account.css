@@ -4,7 +4,6 @@ html, body {
     font-weight: 200;
     font-style: normal;
     /* background-color: rgb(23, 23, 23); */
-    background-color: red;
     color: white;
     margin: 0;
     padding: 0;
@@ -20,7 +19,7 @@ html, body {
 #mainContainer {
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
 }
 
@@ -60,8 +59,9 @@ html, body {
 #mainContentsBox {
     height: 100%;
     width: 75%;
-    background-color: aqua;
+    /* background-color: aqua; */
     overflow-y: auto;
+    background-color: rgb(23, 23, 23);
 }
 
 #profileContentTitle {
@@ -89,17 +89,33 @@ html, body {
 
 .profileContentBlock {
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
     height: 80%;
+}
+
+.profileTextDescription {
+    color: rgb(153, 153, 153)
 }
 
 .allOfContents {
     font-size: 150%;
-    background-color: blue;
+    /* background-color: blue; */
     margin-left: 5%;
     margin-top: 5%;
 }
 
 .allOfContents p2 {
     font-size: 80%;
+}
+
+.smallContentBox {
+    background-color: rgb(27, 27, 27);
+    width: 20%;
+    padding: 1%;
+    font-size: 90%;
+    border: none;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
