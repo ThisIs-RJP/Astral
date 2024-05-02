@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from templates.forms import *
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import *
+from .config import *
 
 # Create your views here.
 def index(request):
@@ -27,4 +28,10 @@ def log_out(request):
     return redirect("/")
 
 def account(request):
-    return render(request, 'account.html')
+    return render(
+        request,
+        'account.html',
+        {
+            "content" : PROFILE_SETTINGS
+        }
+        )

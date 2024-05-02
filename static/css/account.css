@@ -61,6 +61,7 @@ html, body {
     height: 100%;
     width: 75%;
     background-color: aqua;
+    overflow-y: auto;
 }
 
 #profileContentTitle {
@@ -84,4 +85,21 @@ html, body {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.profileContentBlock {
+    width: 100%;
+    background-color: red;
+    height: 80%;
+}
+
+.allOfContents {
+    font-size: 150%;
+    background-color: blue;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.allOfContents p2 {
+    font-size: 80%;
 }

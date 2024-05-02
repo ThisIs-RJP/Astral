@@ -64,6 +64,23 @@
                         </span>
                     </section>
                 </div>
+                
+                <div class="profileContentBlock">
+                    <div class="allOfContents">
+                        {% for k, v in content.items %}
+                            <p1>
+                                {{ k }}
+                            </p1>
+                            <br>
+                            <p2>
+                                {{ v }}
+                            </p2>
+
+                            <div id="spacingSpacing" style="margin-top: 2vw"></div>
+                        {% endfor %}
+
+                    </div>
+                </div>
             </div>
 
         </div>
