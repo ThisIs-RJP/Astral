@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 
 ######################## Creating a user
 
-
 class UserForm(UserCreationForm):
     email = forms.EmailField()
 
@@ -35,3 +34,14 @@ class UserForm(UserCreationForm):
 class UserLoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super(UserLoginForm, self).__init__(*args, **kwargs)
+
+class UserInfo(forms.ModelForm):
+    class Meta:
+        model = UserInfo
+        fields = [
+            "username",
+            "fname",
+            "lname",
+            "email",
+            "pfp"
+        ]

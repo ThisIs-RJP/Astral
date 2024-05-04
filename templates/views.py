@@ -51,10 +51,13 @@ def account(request):
 
     print(returnDictionary)
 
+    form = UserInfo(request.POST)
+
     return render(
         request,
         'account.html',
         {
-            "content" : returnDictionary
+            "content" : returnDictionary,
+            "form" : form
         }
         )
