@@ -43,5 +43,11 @@ class UserInfoForm(forms.ModelForm):
             "fname",
             "lname",
             "email",
+        ]
+
+class UserIconForm(forms.ModelForm):
+    class Meta:
+        model = UserIcon
+        fields = [
             "pfp"
         ]

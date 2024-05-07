@@ -24,7 +24,7 @@
 
                 <div id="userDetails">
                     <div style="display: flex; justify-content: center;">
-                        <img src="static/images/pfp.png" class="userIcon"/>
+                        <img src={{ icon }} class="userIcon"/>
                     </div>
                     <p1 class="centerThis" style="font-size: 2vw">
                         {{ username }}
@@ -71,6 +71,7 @@
                             {% csrf_token %}
                             <!-- Username: {{ form.username }} -->
                             {{ form }}
+                            {{ iconForm }}
                             <div style="display: flex;justify-content: center; width: 100%">
                                 <button type="submit">Submit</button>
                             </div>
