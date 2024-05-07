@@ -35,7 +35,7 @@ class UserLoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super(UserLoginForm, self).__init__(*args, **kwargs)
 
-class UserInfo(forms.ModelForm):
+class UserInfoForm(forms.ModelForm):
     class Meta:
         model = UserInfo
         fields = [

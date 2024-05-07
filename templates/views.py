@@ -29,35 +29,29 @@ def log_out(request):
 
 def account(request):
     user = request.user
+    otherForm = UserInfoForm()
 
-    returnDictionary = {}
-    userInformation = []
-    tempList = []
-    i = 0
+    userExists = UserInfo.objects.all().filter(originalName=request.user)
 
-    userInformation.append(user)
-    userInformation.append(user.email)
+    if not userExists:
+        details = otherForm.save(commit=False)
+        details.username = request.user 
+        details.originalName = request.user
+        details.email = request.user.email
+        details.save()
 
-    # print("User information")
-    # print(userInformation)
-    # print()
+    if otherForm.is_valid():
+        otherForm.save()
 
-    for k, v in PROFILE_SETTINGS.items():
-        tempList.append(v)
-        tempList.append(userInformation[i])
-        returnDictionary[k] = tempList
-        i = i + 1
-        tempList = []
+    userUser = UserInfo.objects.get(originalName=request.user)
 
-    print(returnDictionary)
+    if request.method == 'POST':
+        otherForm = UserInfoForm(request.POST, instance=userUser)
+        if otherForm.is_valid():
+            otherForm.save()
+            return redirect('/account')
+    else:
+        otherForm = UserInfoForm(request.POST)
 
-    form = UserInfo(request.POST)
-
-    return render(
-        request,
-        'account.html',
-        {
-            "content" : returnDictionary,
-            "form" : form
-        }
-        )
+        return render(request, 'account.html', {"username": userUser.username, 'form': otherForm})
+    return render(request, 'account.html', {"username": userUser.username, 'form': otherForm})

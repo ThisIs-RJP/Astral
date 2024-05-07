@@ -27,7 +27,7 @@
                         <img src="static/images/pfp.png" class="userIcon"/>
                     </div>
                     <p1 class="centerThis" style="font-size: 2vw">
-                        {{ user.username }}
+                        {{ username }}
                     </p1>
                 </div>
 
@@ -69,22 +69,10 @@
                     <div class="allOfContents">
                         <form action="" method="post">
                             {% csrf_token %}
-                            {{ form }}
-                            {% for k, v in content.items %}
-                                <p1>
-                                    {{ k }}
-                                </p1>
-                                <br>
-                                <p2 class="profileTextDescription">
-                                    {{ v.0 }}
-                                </p2>
-                                
-                                <div>
-                                    <input value={{ v.1 }} class="smallContentBox">
-                                </div>
-
-                                <div id="spacingSpacing" style="margin-top: 2vw"></div>
-                            {% endfor %}
+                            Username: {{ form.username }}
+                            <div style="display: flex;justify-content: center; width: 100%">
+                                <button type="submit">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
