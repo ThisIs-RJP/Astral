@@ -69,7 +69,8 @@
                     <div class="allOfContents">
                         <form action="" method="post">
                             {% csrf_token %}
-                            Username: {{ form.username }}
+                            <!-- Username: {{ form.username }} -->
+                            {{ form }}
                             <div style="display: flex;justify-content: center; width: 100%">
                                 <button type="submit">Submit</button>
                             </div>

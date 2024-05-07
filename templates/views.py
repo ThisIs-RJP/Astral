@@ -40,18 +40,22 @@ def account(request):
         details.email = request.user.email
         details.save()
 
-    if otherForm.is_valid():
-        otherForm.save()
-
     userUser = UserInfo.objects.get(originalName=request.user)
-
+    initial_data = {
+            'username': userUser.username,
+            'fname': userUser.fname,
+            'lname': userUser.lname,
+            'email': userUser.email,
+            "pfp" : userUser.pfp,
+            "originalName" : userUser.originalName,
+    }
     if request.method == 'POST':
-        otherForm = UserInfoForm(request.POST, instance=userUser)
-        if otherForm.is_valid():
-            otherForm.save()
+        newForm = UserInfoForm(request.POST or None, instance=userUser, initial=initial_data)
+        if newForm.is_valid():
+            newForm.save()
             return redirect('/account')
     else:
-        otherForm = UserInfoForm(request.POST)
+        newForm = UserInfoForm(request.POST or None, instance=userUser, initial=initial_data)
 
-        return render(request, 'account.html', {"username": userUser.username, 'form': otherForm})
-    return render(request, 'account.html', {"username": userUser.username, 'form': otherForm})
+        return render(request, 'account.html', {"username": userUser.username, 'form': newForm})
+    return render(request, 'account.html', {"username": userUser.username, 'form': newForm})
