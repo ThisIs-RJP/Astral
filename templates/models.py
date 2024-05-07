@@ -11,4 +11,4 @@ class UserInfo(models.Model):
 
 class UserIcon(models.Model):
     originalName = models.CharField(max_length=50)
-    pfp = models.ImageField(upload_to='static/images/icons', blank=True)
+    pfp = models.ImageField(upload_to='static/images/icons', blank=True, default="static/images/pfp.png")

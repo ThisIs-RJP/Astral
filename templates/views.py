@@ -43,7 +43,6 @@ def account(request):
         details.email = request.user.email
 
         details2.originalName = request.user
-        details2.pfp = "icons/pfp.png"
 
         details.save()
         details2.save()
