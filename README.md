@@ -26,7 +26,6 @@
 + __Added a login page__
 + __Added a logout function__
 
-
 ### **March 12th**
 + __Finished designing the signup page__
 
