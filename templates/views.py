@@ -29,50 +29,44 @@ def log_out(request):
 
 def account(request):
     user = request.user
-    otherForm = UserInfoForm()
-    iconForm = UserIconForm()
 
-    userExists = UserInfo.objects.all().filter(originalName=request.user)
+    # Check if the UserInfo and UserIcon instances exist
+    user_exists = UserInfo.objects.filter(originalName=user.username).exists()
 
-    if not userExists:
-        details = otherForm.save(commit=False)
-        details2 = iconForm.save(commit=False)
+    if not user_exists:
+        # Create UserInfo and UserIcon if they don't exist
+        user_info = UserInfo.objects.create(
+            username=user.username,
+            fname=user.first_name,
+            lname=user.last_name,
+            email=user.email,
+            originalName=user.username
+        )
+        user_icon = UserIcon.objects.create(
+            originalName=user.username,
+            pfp='icons/default.png'  # Use a default image if desired
+        )
+    else:
+        user_info = UserInfo.objects.get(originalName=user.username)
+        user_icon = UserIcon.objects.get(originalName=user.username)
 
-        details.username = request.user 
-        details.originalName = request.user
-        details.email = request.user.email
-
-        details2.originalName = request.user
-
-        details.save()
-        details2.save()
-
-    userUser = UserInfo.objects.get(originalName=request.user)
-    userUserIcon = UserIcon.objects.get(originalName=request.user)
-
-    initial_data = {
-            'username': userUser.username,
-            'fname': userUser.fname,
-            'lname': userUser.lname,
-            'email': userUser.email,
-            "originalName" : userUser.originalName,
-    }
-
-    initial_data2 = {
-        "pfp" : userUserIcon.pfp
-    }
-
-    print("Here + " + userUserIcon.pfp.url)
     if request.method == 'POST':
-        newForm = UserInfoForm(request.POST or None, instance=userUser, initial=initial_data)
-        iconForm = UserIconForm(request.POST or None, instance=userUser, initial=initial_data2)
-        if newForm.is_valid() and iconForm.is_valid:
-            newForm.save()
-            iconForm.save()
+        # Use POST data and FILES for the forms
+        user_info_form = UserInfoForm(request.POST, instance=user_info)
+        user_icon_form = UserIconForm(request.POST, request.FILES, instance=user_icon)
+
+        # Validate forms
+        if user_info_form.is_valid() and user_icon_form.is_valid():
+            user_info_form.save()
+            user_icon_form.save()
             return redirect('/account')
     else:
-        newForm = UserInfoForm(request.POST or None, instance=userUser, initial=initial_data)
-        iconForm = UserIconForm(request.POST or None, instance=userUser, initial=initial_data2)
+        user_info_form = UserInfoForm(instance=user_info)
+        user_icon_form = UserIconForm(instance=user_icon)
 
-        return render(request, 'account.html', {"username": userUser.username, 'form': newForm, "icon" : userUserIcon.pfp.url, "iconForm" : iconForm })
-    return render(request, 'account.html', {"username": userUser.username, 'form': newForm, "icon" : userUserIcon.pfp.url, "iconForm" : iconForm })
+    return render(request, 'account.html', {
+        "username": user_info.username,
+        "form": user_info_form,
+        "icon": user_icon.pfp.url if user_icon.pfp else None,
+        "iconForm": user_icon_form
+    })
